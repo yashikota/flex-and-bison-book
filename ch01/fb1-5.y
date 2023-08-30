@@ -30,7 +30,6 @@ factor: term
 
 term: NUMBER
     | ABS term { $$ = $2 >= 0 ? $2 : -$2; }
-    | NOT term { $$ = !$2; }
     | OP exp CP { $$ = $2; }
     ;
 
